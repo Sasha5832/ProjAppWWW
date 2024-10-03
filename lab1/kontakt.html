@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Language" content="pl" />
+    <meta name="Author" content="Jan Kowalski" />
+    <link rel="stylesheet" href="style.css">
+    <title>Kontakt</title>
+</head>
+<body>
+    <div class="container">
+        <table class="layout">
+            <tr>
+                <td colspan="2" class="header">
+                    <h1>Komputer moją pasją - Kontakt</h1>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="menu">
+                    <div class="menu">
+                        <a href="index.html">Strona Główna</a>
+                        <a href="strona1.html">Historia komputerów</a>
+                        <a href="strona2.html">Podzespoły</a>
+                        <a href="strona3.html">Oprogramowanie</a>
+                        <a href="kontakt.html">Kontakt</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="content">
+                    <h2>Formularz kontaktowy</h2>
+                    <p>Jeżeli masz jakiekolwiek pytania, wypełnij poniższy formularz, a skontaktujemy się z Tobą w najbliższym czasie.</p>
+                    <form action="mailto:jan.kowalski@example.com" method="post" enctype="text/plain">
+                        <label for="name">Imię:</label><br>
+                        <input type="text" id="name" name="name" required><br><br>
+
+                        <label for="email">E-mail:</label><br>
+                        <input type="email" id="email" name="email" required><br><br>
+
+                        <label for="message">Wiadomość:</label><br>
+                        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+                        <input type="submit" value="Wyślij">
+                        <input type="reset" value="Wyczyść">
+                    </form>
+                </td>
+                <td class="sidebar">
+                    <h2>Kontakt telefoniczny</h2>
+                    <p>Możesz również skontaktować się z nami telefonicznie:</p>
+                    <p><b>Telefon:</b> +48 123 456 789</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="footer">
+                    <p>&copy; 2024 Jan Kowalski. Wszelkie prawa zastrzeżone.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
