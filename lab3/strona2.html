@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Language" content="pl" />
+    <meta name="Author" content="Hrypas Oleksandr" />
+    <link rel="stylesheet" href="style.css">
+    <title>Podzespoły komputerowe</title>
+    <script src="kolorujtlo.js" type="text/javascript"></script>
+    <script src="timedate.js" type="text/javascript"></script>
+</head>
+<body onload="uruchomZegar()">
+    <div id="zegarek"></div>
+    <div id="data"></div>
+    <form METHOD="POST" NAME="background">
+        <INPUT TYPE="button" VALUE="zółty" ONCLICK="changeBackground(`#FFF000`)">
+        <INPUT TYPE="button" VALUE="czarny" ONCLICK="changeBackground(`#000000`)">
+        <INPUT TYPE="button" VALUE="biały" ONCLICK="changeBackground(`#FFFFFF`)">
+        <INPUT TYPE="button" VALUE="zielony" ONCLICK="changeBackground(`#00FF00`)">
+        <INPUT TYPE="button" VALUE="niebieski" ONCLICK="changeBackground(`#0000FF`)">
+        <INPUT TYPE="button" VALUE="pomaranczowy" ONCLICK="changeBackground(`#FF8000`)">
+        <INPUT TYPE="button" VALUE="szary" ONCLICK="changeBackground(`#c0c0c0`)">
+        <INPUT TYPE="button" VALUE="czerwony" ONCLICK="changeBackground(`#FF0000`)">
+    </form>
+    <div class="container">
+        <table class="layout">
+            <tr>
+                <td colspan="2" class="header">
+                    <h1>Komputer moją pasją - Podzespoły komputerowe</h1>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="menu">
+                    <div class="menu">
+                        <a href="index.html">Strona Główna</a>
+                        <a href="strona1.html">Historia komputerów</a>
+                        <a href="strona2.html">Podzespoły</a>
+                        <a href="strona3.html">Oprogramowanie</a>
+                        <a href="kontakt.html">Kontakt</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="content">
+                    <h2>Podzespoły komputerowe</h2>
+                    <p>Komputer składa się z wielu różnych <b>podzespołów</b>, które współpracują ze sobą, aby umożliwić działanie systemu. Główne elementy to procesor, pamięć RAM, karta graficzna, płyta główna oraz zasilacz.</p>
+                    <img src="images/components.jpg" alt="Podzespoły komputerowe" class="img-left">
+                    <p>Jednym z najważniejszych podzespołów jest <span class="highlight">procesor</span> - serce komputera, który wykonuje wszystkie operacje matematyczne i logiczne. Inne ważne elementy to pamięć RAM, która przechowuje dane w trakcie pracy, oraz karta graficzna, odpowiedzialna za wyświetlanie obrazu na monitorze.</p>
+                    <p><i>Pamięć masowa</i>, taka jak dyski SSD lub HDD, służy do przechowywania wszystkich danych, w tym systemu operacyjnego, aplikacji i plików użytkownika.</p>
+                </td>
+                <td class="sidebar">
+                    <h2>Galeria</h2>
+                    <img src="images/gallery6.jpg" alt="Obraz 6">
+                    <img src="images/gallery7.jpg" alt="Obraz 7">
+                    <img src="images/gallery8.jpg" alt="Obraz 8">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="footer">
+                    <p>&copy; 2024 Oleksandr Hrypas. Wszelkie prawa zastrzeżone.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

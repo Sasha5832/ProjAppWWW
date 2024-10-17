@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Language" content="pl" />
+    <meta name="Author" content="Hrypas Oleksandr" />
+    <link rel="stylesheet" href="style.css">
+    <title>Komputer moją pasją</title>
+    <script src="kolorujtlo.js" type="text/javascript"></script>
+    <script src="timedate.js" type="text/javascript"></script>
+    <script src="jquery-3.7.1.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="uruchomZegar()">
+
+    <div id="zegarek"></div>
+    <div id="data"></div>
+    <form METHOD="POST" NAME="background">
+        <INPUT TYPE="button" VALUE="zółty" ONCLICK="changeBackground(`#FFF000`)">
+        <INPUT TYPE="button" VALUE="czarny" ONCLICK="changeBackground(`#000000`)">
+        <INPUT TYPE="button" VALUE="biały" ONCLICK="changeBackground(`#FFFFFF`)">
+        <INPUT TYPE="button" VALUE="zielony" ONCLICK="changeBackground(`#00FF00`)">
+        <INPUT TYPE="button" VALUE="niebieski" ONCLICK="changeBackground(`#0000FF`)">
+        <INPUT TYPE="button" VALUE="pomaranczowy" ONCLICK="changeBackground(`#FF8000`)">
+        <INPUT TYPE="button" VALUE="szary" ONCLICK="changeBackground(`#c0c0c0`)">
+        <INPUT TYPE="button" VALUE="czerwony" ONCLICK="changeBackground(`#FF0000`)">
+    </form>
+
+    <div id="animacjaTestowa3" class="test-block">Klikaj, abym urósł</div>
+    <div>
+        nie klikaj za dużo :)
+    </div>
+
+    <script>
+        $("#animacjaTestowa3").on("click", function() {
+            if (!$(this).is(":animated")) {
+                $(this).animate({
+                    width: "+=50",
+                    height: "+=10",
+                    opacity: "+=0.1"
+                }, {
+                    duration: 3000
+                });
+            }
+        });
+    </script>
+
+    <div id="animacjaTestowa2" class="test-block">Najedź kursorem, a się powiększę</div>
+
+    <script>
+        $("#animacjaTestowa2").on({
+            "mouseover": function() {
+                $(this).animate({
+                    width: 300
+                }, 800);
+            },
+            "mouseout": function() {
+                $(this).animate({
+                    width: 200
+                }, 800);
+            }
+        });
+    </script>
+
+    <div id="animacjaTestowa1" class="test-block">Kliknij, a się powiększę</div>
+
+    <script>
+        $("#animacjaTestowa1").on("click", function() {
+            $(this).animate({
+                width: "500px",
+                opacity: 0.4,
+                fontSize: "3em",
+                borderWidth: "10px"
+            }, 1500);
+        });
+    </script>
+
+    <div class="container">
+        <table class="layout">
+            <tr>
+                <td colspan="2" class="header">
+                    <h1>Komputer moją pasją</h1>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="menu">
+                    <div class="menu">
+                        <a href="index.html">Strona Główna</a>
+                        <a href="strona1.html">Historia komputerów</a>
+                        <a href="strona2.html">Podzespoły</a>
+                        <a href="strona3.html">Oprogramowanie</a>
+                        <a href="kontakt.html">Kontakt</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="content">
+                    <h2>Witamy na naszej stronie!</h2>
+                    <p><b>Komputery</b> to moja pasja od wielu lat. Używamy ich <i>codziennie</i> w pracy, w domu, a także w trakcie rozrywki. W kolejnych sekcjach dowiesz się więcej o <span class="highlight">historii komputerów</span> oraz o nowoczesnych technologiach.</p>
+                    <img src="images/computer1.jpg" alt="Komputer" class="img-left">
+                    <p>Tekst oblewający zdjęcie jest bardzo popularny w tworzeniu stron internetowych. Dzięki temu obrazki są <u>czytelnie</u> osadzone w treści, co czyni całość atrakcyjną wizualnie.</p>
+                </td>
+                <td class="sidebar">
+                    <h2>Galeria</h2>
+                    <img src="images/gallery1.jpg" alt="Obraz 1">
+                    <img src="images/gallery2.jpg" alt="Obraz 2">
+                    <img src="images/gallery3.jpg" alt="Obraz 3">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="footer">
+                    <p>&copy; 2024 Oleksandr Hrypas. Wszelkie prawa zastrzeżone.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
