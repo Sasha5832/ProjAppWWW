@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Language" content="pl" />
+    <meta name="Author" content="Hrypas Oleksandr" />
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Historia komputerów</title>
+    <script src="../js/kolorujtlo.js" type="text/javascript"></script>
+    <script src="../js/timedate.js" type="text/javascript"></script>
+</head>
+<body onload="uruchomZegar()">
+    <div id="zegarek"></div>
+    <div id="data"></div>
+    <form METHOD="POST" NAME="background">
+        <INPUT TYPE="button" VALUE="zółty" ONCLICK="changeBackground(`#FFF000`)">
+        <INPUT TYPE="button" VALUE="czarny" ONCLICK="changeBackground(`#000000`)">
+        <INPUT TYPE="button" VALUE="biały" ONCLICK="changeBackground(`#FFFFFF`)">
+        <INPUT TYPE="button" VALUE="zielony" ONCLICK="changeBackground(`#00FF00`)">
+        <INPUT TYPE="button" VALUE="niebieski" ONCLICK="changeBackground(`#0000FF`)">
+        <INPUT TYPE="button" VALUE="pomaranczowy" ONCLICK="changeBackground(`#FF8000`)">
+        <INPUT TYPE="button" VALUE="szary" ONCLICK="changeBackground(`#c0c0c0`)">
+        <INPUT TYPE="button" VALUE="czerwony" ONCLICK="changeBackground(`#FF0000`)">
+    </form>
+    <div class="container">
+        <table class="layout">
+            <tr>
+                <td colspan="2" class="header">
+                    <h1>Komputer moją pasją - Historia komputerów</h1>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="menu">
+                    <div class="menu">
+                        <a href="../index.html">Strona Główna</a>
+                        <a href="strona1.html">Historia komputerów</a>
+                        <a href="strona2.html">Podzespoły</a>
+                        <a href="strona3.html">Oprogramowanie</a>
+                        <a href="kontakt.html">Kontakt</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="content">
+                    <h2>Historia komputerów</h2>
+                    <p>Komputery zaczęły swoją <b>historię</b> jako <i>proste</i> maszyny liczące. Od tego czasu ewoluowały do nowoczesnych superkomputerów. W tej sekcji prześledzimy tę fascynującą historię.</p>
+                    <img src="../img/history1.jpg" alt="Historia komputerów" class="img-left">
+                    <p>Historia komputerów jest pełna innowacji i ciekawych postaci, takich jak <span class="highlight">Alan Turing</span>, który przyczynił się do rozwoju współczesnej informatyki.</p>
+                </td>
+                <td class="sidebar">
+                    <h2>Galeria</h2>
+                    <img src="../img/gallery4.jpg" alt="Obraz 4">
+                    <img src="../img/gallery5.jpg" alt="Obraz 5">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="footer">
+                    <p>&copy; 2024 Oleksandr Hrypas. Wszelkie prawa zastrzeżone.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
