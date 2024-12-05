@@ -1,0 +1,1 @@
+http://localhost/moj_projekt/lab5/index.php
