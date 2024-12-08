@@ -1,1 +1,0 @@
-http://localhost/169405/lab7/index.php?id=1
