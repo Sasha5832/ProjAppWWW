@@ -70,3 +70,24 @@ xlabel('X');
 ylabel('Y');
 grid on;
 
+Zadanie 4
+points = csvread('punktman.csv');
+x = points(:, 1);
+y = points(:, 2);
+homogeneous_points = [x'; y'; ones(1, length(x))];
+center_x = mean(x);
+center_y = mean(y);
+M_translation_to_center = translation_matrix(-center_x, -center_y);
+M_rotation_90 = rotation_matrix(90);
+M_scaling_small = scale_matrix(0.01, 0.01);
+M_combined = M_scaling_small * M_rotation_90 * M_translation_to_center;
+transformed_points = M_combined * homogeneous_points;
+x_transformed = transformed_points(1, :);
+y_transformed = transformed_points(2, :);
+figure;
+plot(x_transformed, y_transformed, 'm.');
+xlabel('X');
+ylabel('Y');
+grid on;
+
+
