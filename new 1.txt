@@ -47,14 +47,14 @@ grid on;
 
 
 Zadanie 3
->> clear
->> figure
->> points = csvread('punktman.csv');
->> x = points(:, 1);
->> y = points(:, 2);
->> homogeneous_points = [x'; y'; ones(1, length(x))];
->> angle = -60;
->> function M = rotation_matrix(angle)
+clear
+figure
+points = csvread('punktman.csv');
+x = points(:, 1);
+y = points(:, 2);
+homogeneous_points = [x'; y'; ones(1, length(x))];
+angle = -60;
+function M = rotation_matrix(angle)
     rad = deg2rad(angle); % Zamiana stopni na radiany
     M = [cos(rad), -sin(rad), 0;
          sin(rad),  cos(rad), 0;
