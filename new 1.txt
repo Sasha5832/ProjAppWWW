@@ -1,25 +1,25 @@
 Zadanie 1
->> function M = scale_matrix(sx, sy)
+function M = scale_matrix(sx, sy)
     M = [sx, 0,  0;
          0,  sy, 0;
          0,  0,  1];
 end
->> points = csvread('punktman.csv');
->> x = points(:, 1);
->> y = points(:, 2);
->> homogeneous_points = [x'; y'; ones(1, length(x))];
->> sx = 0.1;
->> sy = 0.2;
->> M_scaling = scale_matrix(sx, sy);
->> scaled_points = M_scaling * homogeneous_points;
->> x_scaled = scaled_points(1, :);
->> y_scaled = scaled_points(2, :);
->> figure;
->> plot(x_scaled, y_scaled, 'r.');
->> xlabel('X');
->> ylabel('Y');
->> grid on;
->> axis equal;
+points = csvread('punktman.csv');
+x = points(:, 1);
+y = points(:, 2);
+homogeneous_points = [x'; y'; ones(1, length(x))];
+sx = 0.1;
+sy = 0.2;
+M_scaling = scale_matrix(sx, sy);
+scaled_points = M_scaling * homogeneous_points;
+x_scaled = scaled_points(1, :);
+y_scaled = scaled_points(2, :);
+figure;
+plot(x_scaled, y_scaled, 'r.');
+xlabel('X');
+ylabel('Y');
+grid on;
+axis equal;
 
 
 Zadanie 2
