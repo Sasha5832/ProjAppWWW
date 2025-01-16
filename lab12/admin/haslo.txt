@@ -1,2 +1,0 @@
-$cfg_login = "admin"; // Login administratora
-$cfg_pass = "admin123"; // Hasło administratora
