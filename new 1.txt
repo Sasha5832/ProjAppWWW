@@ -139,3 +139,67 @@ grid on;
 
 display(M_combined);
 
+
+
+
+
+
+
+zadanie przykładowe 
+
+function M = scale_matrix(sx, sy)
+    M = [sx, 0, 0; 
+         0, sy, 0; 
+         0, 0, 1];
+end
+
+function M = rotation_matrix(angle)
+    rad = deg2rad(angle); 
+    M = [cos(rad), -sin(rad), 0; 
+         sin(rad),  cos(rad), 0; 
+         0,         0,        1];
+end
+
+function M = translation_matrix(tx, ty)
+    M = [1, 0, tx; 
+         0, 1, ty; 
+         0, 0,  1];
+end
+
+points = csvread('punktman.csv'); 
+x = points(:, 1);
+y = points(:, 2);
+
+homogeneous_points = [x'; y'; ones(1, length(x))];
+
+sx = 2;
+sy = 0.5;
+M_scaling = scale_matrix(sx, sy);
+
+scaled_points = M_scaling * homogeneous_points;
+
+pivot_x = 5;
+pivot_y = -3;
+
+M_translate_to_origin = translation_matrix(-pivot_x, -pivot_y);
+M_rotation = rotation_matrix(45);
+M_translate_back = translation_matrix(pivot_x, pivot_y);
+
+M_total_rotation = M_translate_back * M_rotation * M_translate_to_origin;
+
+rotated_points = M_total_rotation * scaled_points;
+
+x_final = rotated_points(1, :);
+y_final = rotated_points(2, :);
+
+figure;
+plot(x, y, 'b.', 'DisplayName', 'Oryginalne punkty'); hold on;
+plot(x_final, y_final, 'r.', 'DisplayName', 'Przekształcone punkty');
+
+xlabel('X');
+ylabel('Y');
+grid on;
+
+
+
+
