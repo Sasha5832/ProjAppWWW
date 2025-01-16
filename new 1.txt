@@ -90,4 +90,52 @@ xlabel('X');
 ylabel('Y');
 grid on;
 
+Zadanie 4 wariant 2
+function M = scale_matrix(sx, sy)
+    M = [sx, 0, 0; 
+         0, sy, 0; 
+         0, 0, 1];
+end
+
+function M = rotation_matrix(angle)
+    rad = deg2rad(angle);
+    M = [cos(rad), -sin(rad), 0; 
+         sin(rad),  cos(rad), 0; 
+         0,         0,        1];
+end
+
+function M = translation_matrix(tx, ty)
+    M = [1, 0, tx; 
+         0, 1, ty; 
+         0, 0,  1];
+end
+
+points = csvread('punktman.csv');
+x = points(:, 1);
+y = points(:, 2);
+
+homogeneous_points = [x'; y'; ones(1, length(x))];
+
+center_x = mean(x);
+center_y = mean(y);
+
+M_translation_to_center = translation_matrix(-center_x, -center_y);
+M_rotation_90 = rotation_matrix(90);
+M_scaling_small = scale_matrix(0.01, 0.01);
+
+M_combined = M_scaling_small * M_rotation_90 * M_translation_to_center;
+
+transformed_points = M_combined * homogeneous_points;
+
+x_transformed = transformed_points(1, :);
+y_transformed = transformed_points(2, :);
+
+figure;
+plot(x_transformed, y_transformed, 'm.');
+xlabel('X');
+ylabel('Y');
+grid on;
+
+
+display(M_combined);
 
