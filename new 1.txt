@@ -203,3 +203,39 @@ grid on;
 
 
 
+
+
+
+Zad 1
+clear;
+clc;
+clf;
+
+im = double(imread("rzeczka_mniejsza.jpg"));
+
+
+
+s_we = size(im,2);
+w_we = size(im,1);
+y_we = 1:w_we;
+x_we = 1:s_we;
+
+
+s_wy = 1366;
+w_wy = 768;
+y_wy = 1:w_wy;
+x_wy = 1:s_wy;
+
+y_wy =  y_we(round(1+  ( (y_wy-1)*(w_we-1) ) / (w_wy - 1) ));
+x_wy =  x_we(round(1+  ( (x_wy-1)*(s_we-1) ) / (s_wy - 1) ));
+
+im2 = im(y_we(y_wy),x_we(x_wy),:);
+
+
+subplot(1,2,1);
+imshow(im/255);
+
+subplot(1,2,2);
+imshow(im2/255);
+
+
